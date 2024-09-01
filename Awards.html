@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Project Surya</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/R.png">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom CSS for Cards -->
+    <style>
+
+.additional-cards-section {
+    background-color: #772432;
+    padding: 100px 0;
+}
+
+.small-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.small-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 30%;
+    max-width: 150px;
+    text-align: center;
+}
+
+.small-card:hover {
+    transform: scale(1.05);
+}
+
+.small-card img {
+    width: 100%;
+    height: auto;
+}
+
+.small-card-content {
+    padding: 10px;
+}
+
+.small-card-title {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.small-card-text {
+    font-size: 0.875em;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .small-card {
+        width: 45%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .small-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            width: 30%;
+            
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card img {
+            width: 100%;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-title2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card-text {
+    color: #333;
+    font-size: 1em;
+}
+
+.card-text2 {
+    color: white;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.new-section .card-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.new-section .card2 {
+    position: relative;
+    width: 250px; /* Adjusted width */
+    height: 250px; /* Adjusted height */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.new-section .card2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.new-section .card-content2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    padding: 20px;
+}
+
+.new-section .card2:hover {
+    transform: scale(1.05);
+}
+
+.new-section .card2:hover .card-content2 {
+    opacity: 1;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="img/core-img/sun.png" alt="">
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- ***** Top Header Area ***** -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            <div class="top-header-meta">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: sachchit.cool@gmail.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: 4697397889</span></a>
+                            </div>
+
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta d-flex">
+                                <!-- Language Dropdown -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <!-- Nav Brand -->
+                        <a href="#"><img style="height: 90px; width: 90px;" src="img/R.png" alt=""></a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="Impact.html">Impact</a>
+                                    <li><a href="donate.html">Donate</a>
+                                </ul>
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <!-- Close Icon -->
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div style="background-color: #6b1212;" class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/img10.jpeg);">
+            <h2>Our Achievements & Media Highlights</h2>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Project Surya Section Start ##### -->
+    
+
+            <!-- Cards Section Start -->
+            <div class="row" style="background-color: #772432;">
+                <div class="col-12">
+                    <h3 class="text-center" style="color: white; margin-top: 50px;  margin-bottom: 50px; font-size: 50px;">Awards</h3>
+                    <div class="card-container">
+                        <div class="card">
+                            <img src="img/img8.jpeg" alt="Card Image 1">
+                            <div class="card-content">
+                                <h3 class="card-title">Diana Award 2023: Highest Youth Award in the World for Humanitarian Impact</h3>
+                                <p class="card-text">Our founder Divaa Uthkarsha received the Diana Award 2023 and made it onto the roll of
+                                    honour presiding by Prince Harry, the Duke of Sussex and Prince William of Wales for her work
+                                    on Project Surya and Type One Diabetes. in memory of Diana, Princess of Wales, The Diana
+                                    Award is the most prestigious award a young person aged 9-25 years can receive for their social
+                                    action or humanitarian work. Recognised by the Royal Family of the UK, The award was
+                                    launched by former UK Prime Minister Gordon Brown in honour of the late Diana, Princess of
+                                    Wales
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/img2.jpeg" alt="Card Image 2">
+                            <div class="card-content">
+                                <h3 class="card-title">Speaker at the United Nations Headquarters New York, 1M1B Activate Impact Summit
+                                    ECOSOC chamber
+                                    </h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/img3.jpeg" alt="Card Image 3">
+                            <div class="card-content">
+                                <h3 class="card-title">Recognized as a 21 under 21 changemaker</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/img4.jpeg" alt="Card Image 4">
+                            <div class="card-content">
+                                <h3 class="card-title">Recognized as India’s top 7 changemakers - Divaa Uthkarsha - for Project Surya by
+                                    Better India</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/img5.jpeg" alt="Card Image 5">
+                            <div class="card-content">
+                                <h3 class="card-title">Retweeted and recognised by the official handle of UN SDG 2030</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/img6.jpeg" alt="Card Image 6">
+                            <div class="card-content">
+                                <h3 class="card-title">Presented Project Surya on Wall Street</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/img7.jpeg" alt="Card Image 7">
+                            <div class="card-content">
+                                <h3 class="card-title">Women Icon Award - Rotary, Chief Guest of Honour - District Conference Innerhweel,
+                                    pitched Project Surya</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Cards Section End -->
+
+                <!-- ##### New Section Start ##### -->
+    <section style="background-image: url('img/backgrounds/new-section-bg.jpg'); background-size: cover; background-position: center; background-color: #772432" class="new-section section-padding-100-0">
+        <div class="container2">
+            <div class="row2">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2 style="color: white; font-weight: bold;">Media Coverage</h2>
+                        <p style="color: white;">Project Surya has been featured in leading national media, radio and international news. We have
+                            been featured by:
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container2">
+                <div class="card2">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRigW6j0XT27yRwtC9Fl9BwqJEsg6JN20ngw&s alt="Card 1">
+                    <div class="card-content2">
+                        <h3 class="card-title2">The Hindu (Daily)</h3>
+                       
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src=https://static.wikia.nocookie.net/logopedia/images/d/d7/TOI_logo.png/revision/latest/scale-to-width-down/250?cb=20210602200623 alt="Card 2">
+                    <div class="card-content2">
+                        <h3 class="card-title2">The Times of India - Week Magazine</h3>
+                       
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src=https://play-lh.googleusercontent.com/Prhy-5MPajJzjrTbvmdlhBTPNTFGtq1J0NTr01Lmzd5OJhfuYdbjmS7mba_uYpU4l0s alt="Card 3">
+                    <div class="card-content2">
+                        <h3 class="card-title2">Deccan Herald</h3>
+                        
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8fHpJWPqS3z--Jj_7eLnbS9V94AJttrlotw&s alt="Card 4">
+                    <div class="card-content2">
+                        <h3 class="card-title2">The Hindu Student Edition</h3>
+                       
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src=https://mediabrief.com/wp-content/uploads/2022/03/image-RJs-We-Like-logo-MediaBrief-300x300.jpg alt="Card 5">
+                    <div class="card-content2">
+                        <h3 class="card-title2">Radio Mirchi Morning Show with RJ Jimmy</h3>
+                       
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ-zEE5N8gbzpK9hlwNBi9YIqNREkLXksxIg&s alt="Card 6">
+                    <div class="card-content2">
+                        <h3 class="card-title2">Social Story</h3>
+                       
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuXsUvY-Jcpg3l0ayQnyY-YHPr6w3lzIAn-w&s alt="Card 7">
+                    <div class="card-content2">
+                        <h3 class="card-title2">The Better India</h3>
+                       
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src=https://play-lh.googleusercontent.com/bsaBsehyDyocQo3yuLXO8OG5mJOVuyatvZgVD4T649ia_r7xf066_K2tFRvNrIu0BA alt="Card 8">
+                    <div class="card-content2">
+                        <h3 class="card-title2"> Your Story, The Print, India Weekly, South First, Global Indian, Andhra Jyoti Newspaper,
+                            Vijay Karnataka and International TV.</h3>
+                       
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src="img/Screenshot 2024-07-19 194338.png" alt="Card 8">
+                    <div class="card-content2">
+                        <h3 class="card-title2"> Guiding Young Minds magazine </h3>        
+                    </div>
+                    
+                </div>
+                <div class="card2">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_flZYazeWqPX_2E8Z-ytVcYVE_7yLIKsRig&s alt="Card 8">
+                    <div class="card-content2">
+                        <h3 class="card-title2">  The Big Small Talk Podcast  </h3>        
+                    </div>
+                    
+                </div>
+                
+                <div class="card2">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuiAb9aAGj8hW6o1X1WpyttZPt3470goHWaw&s alt="Card 8">
+                    <div class="card-content2">
+                        <h3 class="card-title2"> Femina  </h3>        
+                    </div>
+                    
+                </div>
+                <div class="card2">
+                    <img src=https://i.pinimg.com/originals/d7/08/7e/d7087e7c5909da949c3ad78b12fd4f98.jpg alt="Card 8">
+                    <div class="card-content2">
+                        <h3 class="card-title2"> MamaEarth  </h3>        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="additional-cards-section section-padding-100-0">
+        <div class="container" style="background-color: #772432;">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center" style="color: white; margin-top: 50px;">Incubated by</h3>
+                    <div class="small-card-container">
+                        <div class="small-card">
+                            <img src=https://clg-storage.s3.amazonaws.com/blog/qFHIs1590220686062 alt="Card Image 1">
+                            <div class="small-card-content">
+                                <h3 class="small-card-title">1M1B </h3>
+                               
+                            </div>
+                        </div>
+                        <div class="small-card">
+                            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ItERhxccFFwTJt-i0KDIzBKvd1LsdGk0Ug&s alt="Card Image 2">
+                            <div class="small-card-content">
+                                <h3 class="small-card-title">International Weserve Foundation</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="small-card">
+                            <img src=https://cdn.freebiesupply.com/logos/large/2x/rotary-international-6-logo-png-transparent.png alt="Card Image 3">
+                            <div class="small-card-content">
+                                <h3 class="small-card-title">Rotary International 
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="small-card">
+                            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyKcQfe7pVJ2AC5qxo4KE45sUtOeregt0_xw&s alt="Card Image 4">
+                            <div class="small-card-content">
+                                <h3 class="small-card-title">Innerwheel International 
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="small-card">
+                            <img src=https://media.licdn.com/dms/image/C4D0BAQFQApQTe8Dicg/company-logo_200_200/0/1632245901852/bristlecone_logo?e=2147483647&v=beta&t=Q3HF2adjIqUUjL-0ZQrewHCq2QHL2i6fNJJWhPbadkE alt="Card Image 5">
+                            <div class="small-card-content">
+                                <h3 class="small-card-title">Bristlecone 
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="small-card">
+                            <img src="img/img9.jpeg" alt="Card Image 6">
+                            <div class="small-card-content">
+                                <h3 class="small-card-title">Sudaiva Foundation</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+        </div>
+    </section>
+    <!-- ##### Services Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-image: url(img/bg-img/3.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-30">
+                                <a href="#"><img src="img/R.png" alt=""></a>
+                            </div>
+                            <p>Integer nec bibendum lacus. Suspen disse dictum enim sit amet libero males uada feugiat. Praesent malesuada.</p>
+                            <div class="social-info">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>QUICK LINK</h5>
+                            </div>
+                            <nav class="widget-nav">
+                                <ul>
+                                    <li><a href="#">Purchase</a></li>
+                                    <li><a href="#">Policities</a></li>
+                                    <li><a href="#">Help</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Subscribe</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>BEST SELLER</h5>
+                            </div>
+
+                            <!-- Single Best Seller Products -->
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <a href="shop-details.html"><img src="img/bg-img/4.jpg" alt=""></a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="shop-details.html">Cactus Flower</a>
+                                    <p>$10.99</p>
+                                </div>
+                            </div>
+
+                            <!-- Single Best Seller Products -->
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <a href="shop-details.html"><img src="img/bg-img/5.jpg" alt=""></a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="shop-details.html">Tulip Flower</a>
+                                    <p>$11.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT</h5>
+                            </div>
+
+                            <div class="contact-information">
+                                <p><span>Address:</span> 1481 Creekside Lane Avila Beach, CA 93424</p>
+                                <p><span>Phone:</span> +53 345 7953 32453</p>
+                                <p><span>Email:</span> yourmail@gmail.com</p>
+                                <p><span>Open hours:</span> Mon - Sun: 8 AM to 9 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center">
+                    <div class="col-12">
+                        <div class="copywrite-text text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>
